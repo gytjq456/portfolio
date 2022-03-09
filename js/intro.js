@@ -264,10 +264,11 @@
 	let mainVisual_txt = document.querySelector(".mainVisual_txt");
 	setTimeout(() => {
 		mainVisual_txt.classList.add("on");
+		$(".scroll-section").addClass("on")
 	}, 100);
 
 
-	$(".scroll-section").addClass("on")
+
 
 
 
