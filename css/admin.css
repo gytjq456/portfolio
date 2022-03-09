@@ -1,0 +1,147 @@
+body {
+  background: #f7f7f7;
+}
+
+.admin-login {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.admin-login article {
+  width: 100%;
+  padding: 50px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.admin-login form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  text-align: center;
+  gap: 50px;
+}
+
+.admin-login form .thum {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.admin-login form .thum img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: inherit;
+}
+
+.admin-login form .input-area {
+  position: relative;
+}
+
+.admin-login form .input-area input {
+  font-size: 1.6rem;
+  font-weight: 400;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+  padding: 0 12px;
+}
+
+.admin-login form .input-area input::-webkit-input-placeholder {
+  color: #999;
+  font-weight: 300;
+}
+
+.admin-login form .input-area input:-ms-input-placeholder {
+  color: #999;
+  font-weight: 300;
+}
+
+.admin-login form .input-area input::-ms-input-placeholder {
+  color: #999;
+  font-weight: 300;
+}
+
+.admin-login form .input-area input::placeholder {
+  color: #999;
+  font-weight: 300;
+}
+
+.admin-login form .input-area > p:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.admin-login form .id-remember {
+  margin-top: 20px;
+  position: relative;
+}
+
+.admin-login form .id-remember input {
+  position: absolute;
+  z-index: -9999px;
+}
+
+.admin-login form .id-remember input:checked + label span i {
+  display: block;
+}
+
+.admin-login form .id-remember label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+  color: #888;
+}
+
+.admin-login form .id-remember span {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  margin-right: 8px;
+}
+
+.admin-login form .id-remember span i {
+  font-size: 18px;
+  color: #5c6486;
+  display: none;
+}
+
+.admin-login form button {
+  margin-top: 80px;
+  width: 100%;
+  max-width: 280px;
+  height: 55px;
+  border-radius: 25px;
+  background: #5c6486;
+  color: #fff;
+  font-size: 1.8rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.admin-login form button:hover {
+  border: 1px solid #5c6486;
+  color: #5c6486;
+  background: #fff;
+}

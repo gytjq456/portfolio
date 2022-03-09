@@ -1,0 +1,48 @@
+//color
+$color-main: #2d5037 !global;
+$color-black: #000 !global;
+$color-white: #fff !global;
+$color-red: #e60012 !global;
+
+// font
+$font-noto: "Noto Sans KR", sans-serif !global;
+
+// font-size 10 to rem
+$font-size12: 12px !global;
+$font-size14: 14px !global;
+$font-size15: 1.5rem !global;
+$font-size16: 1.6rem !global;
+$font-size17: 1.7rem !global;
+$font-size18: 1.8rem !global;
+$font-size20: 2rem !global;
+$font-size22: 2.2rem !global;
+
+// padding-size
+$inner-padding: 0 20px !global;
+
+// border-radius: 50%;
+$radiusHarf: 50% !global;
+
+// mixin
+@mixin inner($width) {
+  width: 100%;
+  max-width: $width;
+  margin: 0 auto;
+  position: relative;
+}
+
+@mixin innerPadding {
+  padding: 0 20px;
+}
+
+@mixin positionCnt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin bgDefault($src) {
+  background: url("/img/sub/#{$src}.jpg") no-repeat center center;
+  background-size: cover;
+}

@@ -1,0 +1,112 @@
+#mainVisual {
+  background: #f9f8fd;
+  height: 500px;
+}
+
+#mainVisual > div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#mainVisual dl {
+  color: #222;
+}
+
+#mainVisual dl dt {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+#mainVisual dl dd {
+  font-size: 1.8rem;
+  margin-top: 24px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+#galleryList .category {
+  padding: 36px 0;
+}
+
+#galleryList .category ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#galleryList .category ul li.on {
+  border-radius: 8px;
+  background: rgba(13, 12, 34, 0.05);
+  font-weight: 500;
+}
+
+#galleryList .category ul li.on a {
+  color: #333;
+}
+
+#galleryList .category ul a {
+  display: inline-block;
+  padding: 10px 12px;
+}
+
+#galleryList .thumList {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(336px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+  grid-gap: 36px;
+}
+
+#galleryList .thumList a:hover .img img {
+  -webkit-transform: scale(1.1) translate(-48.8%, -48.8%);
+          transform: scale(1.1) translate(-48.8%, -48.8%);
+}
+
+#galleryList .thumList .img {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-top: 73.28605%;
+}
+
+#galleryList .thumList .img img {
+  max-height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#galleryList .thumList .txt {
+  padding: 12px;
+}
+
+#galleryList .thumList .tit {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 500;
+}
+
+#galleryList .thumList .date {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #959595;
+}

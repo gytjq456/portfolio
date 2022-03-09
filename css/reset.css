@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+/*font + */
+@import url("//fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+/* font-family: 'Noto Sans KR', sans-serif; */
+/*
+font-family: 'Nanum Square'; 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Kanit', sans-serif;
+font-family: 'NanumSquare', sans-serif;
+font-family: 'Rubik', sans-serif;
+*/
+
+/*�巡�׻��� ����*/
+/* ::-moz-selection { background:#263658; color:#fff; }
+::selection { background:#263658; color:#fff; } */
+
+* {
+  max-height: 1000000px;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  word-break: break-word;
+}
+
+/* ����� ���θ�� ��ƮȮ�� ���� */
+body {
+  -webkit-text-size-adjust: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+table,
+input,
+button,
+textarea {
+  font-size: 62.5%;
+  font-family: "Rubik", "Noto Sans KR", sans-serif;
+  color: #666;
+  line-height: 1.4;
+  letter-spacing: -0.6px;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* for AXISJ */
+/* body, select, input, a, button{line-height:1;} */
+button {
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+a {
+  outline: none;
+  select-dummy: expression(this.hideFocus=true);
+}
+
+div,
+pre,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+input,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+em,
+address {
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+table {
+  border: 0;
+  width: 100%;
+}
+table th {
+  word-wrap: break-word;
+}
+table td {
+  word-wrap: break-word;
+}
+
+img,
+fieldset {
+  border: none;
+}
+img,
+object {
+  vertical-align: top;
+}
+img {
+  max-width: 100%;
+}
+
+caption {
+  text-align: left;
+}
+
+select {
+  font-size: 12px;
+  vertical-align: middle;
+  color: #666;
+}
+input {
+  font-size: 12px;
+  vertical-align: middle;
+  color: #666;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+textarea {
+  font-size: 12px;
+  color: #666;
+}
+input[type="radio"] {
+  vertical-align: middle;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+a:link {
+  color: #666;
+  text-decoration: none;
+}
+a:active {
+  color: #666;
+  text-decoration: none;
+}
+a:visited {
+  color: #666;
+  text-decoration: none;
+}
+a:hover {
+  color: #666;
+  text-decoration: none;
+}
+
+/* hidden ó�� */
+hr,
+caption,
+legend {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+#sknavi {
+  position: absolute;
+}
+#sknavi li a {
+  position: absolute;
+  top: -200px;
+}
+#sknavi li a:focus,
+#sknavi li a:active {
+  top: 1px;
+  left: 0;
+  display: block;
+  width: 150px;
+  color: #fff;
+  height: 18px;
+  padding: 5px 3px 0 3px;
+  margin-left: 5px;
+  text-align: center;
+  font-size: 100%;
+  font-weight: bold;
+  background: #115aa3;
+  text-decoration: none;
+}

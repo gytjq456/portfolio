@@ -1,0 +1,77 @@
+@import "inc";
+.inner1800 {
+  @include inner(1800px);
+}
+.inner1400 {
+  @include inner(1400px);
+}
+
+#wrap {
+  font-size: 1.6rem;
+}
+
+header {
+  > section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 0;
+    > * {
+      flex: 1 1 0;
+
+      &:nth-child(2) {
+        flex: 2 1 0;
+      }
+    }
+  }
+  #logo {
+    a {
+      font-size: 44px;
+      color: #6767ef;
+    }
+  }
+
+  #gnb {
+    .depth1 {
+      display: flex;
+      justify-content: center;
+      li {
+        display: inline-block;
+        > a {
+          height: 80px;
+          display: flex;
+          align-items: center;
+          padding: 0 20px;
+          justify-content: center;
+          font-size: $font-size15;
+          color: #333;
+        }
+      }
+    }
+  }
+  #schForm {
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    input {
+      height: 32px;
+      border: 1px solid #ddd;
+      padding: 0 15px;
+      border-radius: 6px;
+    }
+    button {
+      font-size: 2rem;
+      margin-left: 10px;
+    }
+  }
+}
+
+footer {
+  padding: 36px;
+  text-align: center;
+  margin-top: 60px;
+  // background: #333;
+  border-top: 1px solid #ddd;
+}
