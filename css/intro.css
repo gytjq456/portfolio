@@ -318,6 +318,7 @@ body.before-load {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -375,8 +376,39 @@ body.before-load {
 
 /* front-end portfolio*/
 .workPortFolio {
-  padding-top: 50px;
   position: relative;
+}
+
+.workPortFolio .year_cate {
+  margin-bottom: 30px;
+}
+
+.workPortFolio .year_cate ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.workPortFolio .year_cate ul button {
+  color: #fff;
+  font-size: 2rem;
+  opacity: 0.2;
+}
+
+.workPortFolio .year_cate ul li.on button {
+  opacity: 1;
+}
+
+.workPortFolio .year_cate ul li.on button::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  display: block;
 }
 
 .workPortFolio .arrows button {
@@ -414,7 +446,7 @@ body.before-load {
   width: 100%;
 }
 
-.workPortFolio .work-item::after {
+.workPortFolio .work-item::before {
   content: "";
   width: 440px;
   height: 440px;
@@ -438,17 +470,24 @@ body.before-load {
 
 .workPortFolio .work-item .tit {
   font-size: 3rem;
+  font-weight: 700;
   color: #fff;
+}
+
+.workPortFolio .work-item .tit * {
   line-height: 1;
 }
 
 .workPortFolio .work-item .tit span {
+  font-weight: 300;
   font-size: 1.8rem;
   text-transform: capitalize;
 }
 
 .workPortFolio .work-item .cate {
   font-size: 1.2rem;
+  opacity: 0.5;
+  letter-spacing: 1px;
   margin: 20px 0;
   color: #fff;
   font-weight: 300;
@@ -462,7 +501,7 @@ body.before-load {
   font-size: 1rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  color: #F2F2F2;
+  color: #f2f2f2;
   padding: 10px 0;
   position: relative;
 }

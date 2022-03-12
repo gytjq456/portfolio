@@ -12,25 +12,62 @@
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	<script src="//code.jquery.com/jquery.min.js"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
 	<title>Document</title>
+	<script>
+		if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+			window.location = 'microsoft-edge:' + window.location;
+			setTimeout(function () {
+				window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+			}, 1);
+		}
+
+		function updateOrientation() {
+			var orientationValue = window.orientation
+			if (orientationValue == 90 || orientationValue == -90) {
+				$("meta[name=viewport]").attr("content",
+					"width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes,target-densitydpi=medium-dpi"
+				);
+			}
+		}
+
+		window.onload = function () {
+			document.body.onorientationchange = updateOrientation;
+		}
+
+
+		var windowWidth = window.screen.width
+		setViewPort(windowWidth);
+
+		function setViewPort(w_width) {
+			if (w_width <= 400) {
+				$("meta[name=viewport]").attr("content",
+					"width=400, maximum-scale=2.0, user-scalable=yes, target-densitydpi=medium-dpi");
+			} else {
+				$("meta[name=viewport]").attr("content",
+					"width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes,target-densitydpi=medium-dpi"
+				);
+			}
+		}
+
+		window.addEventListener('resize', function (event) {
+			windowWidth = window.screen.width
+			setViewPort(windowWidth);
+		}, true);
+	</script>
 </head>
 
 <body>
 	<div class="container">
 		<section class="scroll-section" id="scroll-section-0">
 			<div class="mainVisual_txt">
-				<h1>
-					<!-- <p>Non-Player-Character</p>
-					<span>Art Direction Web & Digital Design</span> -->
-					<span>공감과 소통으로 사용자를 생각하는</span>
-					<p>WEB PUBLISHER</p>
-				</h1>
-
+				<div class="inner">
+					<h1>
+						<span>공감과 소통으로 사용자를 생각하는</span>
+						<p>WEB PUBLISHER</p>
+					</h1>
+				</div>
 			</div>
-
 			<div class="hero">
-
 				<div class="snow">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMax slice">
 						<g fill="#FFF" fill-opacity=".15" transform="translate(55 42)">
@@ -107,10 +144,7 @@
 				<div class="hero__content">
 					<h1>SVG Snow</h1>
 				</div>
-
 			</div>
-
-
 			<div class="profileImg"><img src="img/intro/gytjq.png" alt=""></div>
 			<div class="sticky-elem main-message a">
 				<p>매일 기록하고, <br>매일 새로운것에 도전</p>
@@ -134,21 +168,23 @@
 				<span>Introducing our portfolio.</span>
 			</div>
 			<div class="workPortFolio ">
-				<div class="arrows">
-					<button class="prev"><i class="xi-long-arrow-left"></i></button>
-					<button class="next"><i class="xi-long-arrow-right"></i></button>
+				<div class="year_cate">
+					<ul>
+						<li class="on"><button>2021</button></li>
+						<li><button>2022</button></li>
+					</ul>
 				</div>
 				<div class="slider">
 					<article data-color="#db0b18">
 						<div class="work-item">
 							<a href="http://woosu.webmoa21.co.kr/kr/index.asp" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>우수AMS</p>
 										<span>Woosu AMS</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -160,12 +196,12 @@
 						<div class="work-item">
 							<a href="http://www.accuver.com/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>이노와이어리스</p>
 										<span>Accuver</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -177,12 +213,12 @@
 						<div class="work-item">
 							<a href="http://www.dine.co.kr/kr/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>다인정공</p>
 										<span>DINE GROUP</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -194,12 +230,12 @@
 						<div class="work-item">
 							<a href="http://www.isignal.co.kr/kr/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>아이시그널</p>
 										<span>Isignal</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -211,12 +247,12 @@
 						<div class="work-item">
 							<a href="http://doilecotec.webmoa21.co.kr/kr/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>도일에코텍</p>
 										<span>Doilecotec</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -228,12 +264,12 @@
 						<div class="work-item">
 							<a href="http://www.evermodel.com/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>에버모델</p>
 										<span>Evermodel</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -245,12 +281,12 @@
 						<div class="work-item">
 							<a href="http://www.bristex.com/en/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>브리즈텍스</p>
 										<span>Bristex</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -262,12 +298,12 @@
 						<div class="work-item">
 							<a href="http://medirama.webmoa21.co.kr/en/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>메디라마</p>
 										<span>Medirama</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -279,12 +315,12 @@
 						<div class="work-item">
 							<a href="http://pasteur.webmoa21.co.kr/en/index.php" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>한국파스퇴르연구소</p>
 										<span>Pasteur</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -296,12 +332,12 @@
 						<div class="work-item">
 							<a href="http://gaonchips.com/kr/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>가온칩스</p>
 										<span>Gaonchips</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -313,12 +349,12 @@
 						<div class="work-item">
 							<a href="https://www.gi-innovation.com/kr/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>지아이이노베이션</p>
 										<span>Ginnovation</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -330,12 +366,12 @@
 						<div class="work-item">
 							<a href="http://hunverse.webmoa21.co.kr/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>휴니버스글로벌</p>
 										<span>Hunverse</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -347,12 +383,12 @@
 						<div class="work-item">
 							<a href="https://seo-young.co.kr/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>서영</p>
 										<span>SeoYoung</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -364,12 +400,12 @@
 						<div class="work-item">
 							<a href="http://www.rootconsulting.co.kr/kr/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>루트컨설팅</p>
 										<span>Rootconsulting</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -381,12 +417,12 @@
 						<div class="work-item">
 							<a href="http://stininc.com/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>스틴</p>
 										<span>Stininc</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -398,12 +434,12 @@
 						<div class="work-item">
 							<a href="https://www.wavepia.com/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>웨이브피아</p>
 										<span>wavepia</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -415,12 +451,12 @@
 						<div class="work-item">
 							<a href="https://www.wisenut.com/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>와이즈넛</p>
 										<span>wisenut</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -432,12 +468,12 @@
 						<div class="work-item">
 							<a href="http://intekplus_new.webmoa21.co.kr/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>인텍플러스</p>
 										<span>intekplus</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -449,12 +485,12 @@
 						<div class="work-item">
 							<a href="http://dkelecons.com/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>동국일렉콘스</p>
 										<span>dkelecons</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -466,12 +502,12 @@
 						<div class="work-item">
 							<a href="http://www.kabit.or.kr/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>한국BI기술사업화협회</p>
 										<span>kabit</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -483,12 +519,12 @@
 						<div class="work-item">
 							<a href="https://www.intosky.co.kr/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>인투스카이</p>
 										<span>intosky</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -500,12 +536,12 @@
 						<div class="work-item">
 							<a href="http://www.posan.com/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>포산인더스트리</p>
 										<span>posan</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -517,12 +553,12 @@
 						<div class="work-item">
 							<a href="http://www.tlkorea.co.kr/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>티엘코리아</p>
 										<span>tlkoreanew</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -534,12 +570,12 @@
 						<div class="work-item">
 							<a href="http://t-oz.webmoa21.co.kr/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>토즈</p>
 										<span>t-oz</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -551,12 +587,12 @@
 						<div class="work-item">
 							<a href="http://www.dtk3.com/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>델타텍코리아</p>
 										<span>dtk</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -568,12 +604,12 @@
 						<div class="work-item">
 							<a href="https://www.pnihuman.com/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE
+									</div>
 									<div class="tit">
 										<p>피앤아이휴먼코리아</p>
 										<span>pnihuman</span>
-									</div>
-									<div class="cate">
-										WEBSITE <span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -585,12 +621,12 @@
 						<div class="work-item">
 							<a href="http://sian.webmoa21.co.kr/redcap/b/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE 시안
+									</div>
 									<div class="tit">
 										<p>레드캡</p>
 										<span>redcap</span>
-									</div>
-									<div class="cate">
-										WEBSITE 시안<span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -602,12 +638,12 @@
 						<div class="work-item">
 							<a href="http://sian.webmoa21.co.kr/gsneotek/a/" target="_blank">
 								<div class="info">
+									<div class="cate">
+										WEBSITE 시안
+									</div>
 									<div class="tit">
 										<p>지에스네오텍</p>
 										<span>gsneotek</span>
-									</div>
-									<div class="cate">
-										WEBSITE 시안<span>2021</span>
 									</div>
 									<div class="more">View Project</div>
 								</div>
@@ -618,11 +654,17 @@
 
 
 				</div>
+				<div class="arrows">
+					<button class="prev"><i class="xi-long-arrow-left"></i></button>
+					<button class="next"><i class="xi-long-arrow-right"></i></button>
+				</div>
 			</div>
 		</section>
 
 		<footer class="footer">
-			본 사이트는 상업적인 목적이 아닌 개인 포트폴리오 용도로 만들어졌습니다.
+			<div class="inner">
+				본 사이트는 상업적인 목적이 아닌 개인 포트폴리오 용도로 만들어졌습니다.
+			</div>
 		</footer>
 	</div>
 </body>

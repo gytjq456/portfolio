@@ -1,49 +1,121 @@
-/* @media (min-width: 1024px) {
-	.main-message {
-		font-size: 4vw;
+@media (max-width: 1200px) {
+  .inner {
+    padding: 0 20px;
+  }
+  #scroll-section-0 h1 p {
+    font-size: 6rem;
+  }
+  .section_tit {
+    margin-bottom: 0;
+  }
+  .section_tit p {
+    font-size: 6rem;
+  }
+  .main-message {
+    font-size: 5rem;
+  }
+  #scroll-section-1 {
+    height: auto !important;
+    padding: 80px 0;
+  }
+  .workPortFolio {
+    padding-top: 50px;
+  }
+  .workPortFolio .year_cate {
+    margin-bottom: 0;
+  }
+  .workPortFolio .work-item::before {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    top: unset;
+    margin: 0 auto;
+    position: static;
+  }
+  .workPortFolio .work-item a {
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .workPortFolio .work-item a > * {
+    width: 100% !important;
+  }
+  .workPortFolio .work-item .info {
+    max-width: 100%;
+  }
+  .workPortFolio .work-item .more::before {
+    display: none;
+  }
+  .workPortFolio .img {
+    padding: 0 20px;
+  }
+  .workPortFolio img {
+    margin: 0 auto;
+  }
+}
 
-		small {
-			font-size: 1.5vw;
-		}
-	}
+@media (max-width: 767px) {
+  #scroll-section-0 h1 p {
+    font-size: 5rem;
+  }
+  .sticky-elem .bigTit {
+    font-size: 5rem;
+    white-space: nowrap;
+  }
+}
 
-	.description {
-		padding: 0;
-		font-size: 2rem;
+@media (max-width: 640px) {
+  #scroll-section-0 h1 p {
+    font-size: 4rem;
+  }
+  .main-message {
+    font-size: 3rem;
+  }
+  .sticky-elem .bigTit {
+    font-size: 3.2rem;
+  }
+  .section_tit p {
+    font-size: 5rem;
+  }
+  .workPortFolio .work-item {
+    padding: 0;
+    margin-top: 50px;
+  }
+  .workPortFolio .arrows {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+  }
+  .workPortFolio .arrows button {
+    position: static;
+  }
+}
 
-		strong {
-			font-size: 6rem;
-		}
-	}
-
-	#scroll-section-2 {
-		.main-message {
-			font-size: 6vw;
-		}
-
-		.b {
-			top: 20%;
-			left: 53%;
-		}
-
-		.c {
-			left: 55%;
-		}
-	}
-
-	.sticky-elem.desc-message {
-		&.desc-message {
-			width: 20%;
-		}
-	}
-
-	.mid-message {
-		width: 1000px;
-		padding: 0;
-		font-size: 4vw;
-	}
-
-	.canvas-caption {
-		font-size: 2rem;
-	}
-} */
+@media (max-width: 480px) {
+  #scroll-section-0 h1 p {
+    font-size: 3rem;
+  }
+  #scroll-section-0 h1 span {
+    font-size: 1.6rem;
+  }
+  .main-message {
+    font-size: 2.6rem;
+  }
+  .section_tit p {
+    font-size: 4rem;
+  }
+  .section_tit span {
+    font-size: 1.6rem;
+  }
+  .workPortFolio .work-item .tit span {
+    font-size: 1.6rem;
+  }
+}
