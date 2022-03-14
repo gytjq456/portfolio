@@ -395,13 +395,42 @@ body.before-load {
     }
   }
 
+	.pageNum {
+		display: flex;
+		justify-content: center;
+		color:#fff;
+		font-size: 2rem;
+		margin-top: 30px;
+		gap:10px;
+		.current {
+
+		}
+		.total {
+			opacity: 0.5;
+			font-weight: 300;
+		}
+	}
+
   .slider {
     position: relative;
   }
 
+	.slick-slide{
+		display: flex !important;
+		justify-content: center;
+		img {
+			transition: all 0.5s;
+		}
+	}
+
   .work-item {
     position: relative;
     padding: 50px 0;
+		display: inline-block;
+		&:hover {
+			&::before {
+			}
+		}
 
     a {
       &:hover {
@@ -412,6 +441,11 @@ body.before-load {
             width: 100%;
           }
         }
+				.img {
+					img {
+						transform: scale(1.1);
+					}
+				}
       }
     }
 
@@ -420,7 +454,6 @@ body.before-load {
       width: 440px;
       height: 440px;
       border-radius: 50%;
-      // background: #fff;
       display: block;
       position: absolute;
       left: 50%;
@@ -428,7 +461,7 @@ body.before-load {
       transform: translate(-50%, -50%);
       background: var(--portfolioBg);
       z-index: -1;
-      transition: background 1s;
+      transition: background 1s, transform 0.5s;
     }
     .info {
       min-width: 200px;

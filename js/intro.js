@@ -13,7 +13,7 @@
 	let currentScene = 0; // 현재 보고있는 section
 	let enterNewScene = false; // 새로운 section이 시작되는 순간 true
 	let workPortFolio = document.querySelector(".workPortFolio");
-	let gytjq = document.querySelector(".profileImg");
+	// let gytjq = document.querySelector(".profileImg");
 	const sceneInfo = [
 		{
 			type: 'sticky',
@@ -129,8 +129,8 @@
 				if (scrollRatio <= 0.22) {
 					// in
 
-					gytjq.style.opacity = calcValues(values.messageA_opacity_in, currentYOffset);
-					gytjq.style.transform = `translate3d(0, ${calcValues(values.messageA_translateY_in, currentYOffset)}%, 0)`;
+					// gytjq.style.opacity = calcValues(values.messageA_opacity_in, currentYOffset);
+					// gytjq.style.transform = `translate3d(0, ${calcValues(values.messageA_translateY_in, currentYOffset)}%, 0)`;
 					objs.messageA.style.opacity = calcValues(values.messageA_opacity_in, currentYOffset);
 					objs.messageA.style.transform = `translate3d(0, ${calcValues(values.messageA_translateY_in, currentYOffset)}%, 0)`;
 					objs.bigTitA.style.transform = `translateX(${calcValues(values.bigTitA_translateX_in, currentYOffset)}%)`
@@ -165,7 +165,7 @@
 				if (scrollRatio <= 0.83) {
 					// in
 				} else {
-					gytjq.style.opacity = calcValues(values.messageD_opacity_out, currentYOffset);
+					// gytjq.style.opacity = calcValues(values.messageD_opacity_out, currentYOffset);
 				}
 
 				break;
@@ -273,6 +273,11 @@
 
 
 	let slider = $('.workPortFolio .slider');
+	let sliderItem = slider.find("article");
+	let pageNum = $(".workPortFolio").find(".pageNum");
+	console.log(sliderItem);
+	pageNum.find(".total").text(sliderItem.length)
+
 	slider.slick({
 		infinite: true,
 		dots: false,
@@ -287,6 +292,7 @@
 		var current = currentSlide + 1
 		let bgColor = slider.find("article").eq(nextSlide + 1).data("color")
 		document.documentElement.style.setProperty("--portfolioBg", `${bgColor}`);
+		pageNum.find(".current").text(nextSlide + 1)
 	});
 
 	$(workPortFolio).find(".arrows button").on("click", function (e) {

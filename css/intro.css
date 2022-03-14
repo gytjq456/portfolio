@@ -432,13 +432,46 @@ body.before-load {
   right: 20px;
 }
 
+.workPortFolio .pageNum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.workPortFolio .pageNum .total {
+  opacity: 0.5;
+  font-weight: 300;
+}
+
 .workPortFolio .slider {
   position: relative;
+}
+
+.workPortFolio .slick-slide {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.workPortFolio .slick-slide img {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .workPortFolio .work-item {
   position: relative;
   padding: 50px 0;
+  display: inline-block;
 }
 
 .workPortFolio .work-item a:hover .more {
@@ -447,6 +480,11 @@ body.before-load {
 
 .workPortFolio .work-item a:hover .more::before {
   width: 100%;
+}
+
+.workPortFolio .work-item a:hover .img img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .workPortFolio .work-item::before {
@@ -462,8 +500,10 @@ body.before-load {
           transform: translate(-50%, -50%);
   background: var(--portfolioBg);
   z-index: -1;
-  -webkit-transition: background 1s;
-  transition: background 1s;
+  -webkit-transition: background 1s, -webkit-transform 0.5s;
+  transition: background 1s, -webkit-transform 0.5s;
+  transition: background 1s, transform 0.5s;
+  transition: background 1s, transform 0.5s, -webkit-transform 0.5s;
 }
 
 .workPortFolio .work-item .info {
