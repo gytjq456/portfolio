@@ -279,6 +279,7 @@
 	pageNum.find(".total").text(sliderItem.length)
 
 	slider.slick({
+		autoplay: true,
 		infinite: true,
 		dots: false,
 		arrows: false,
