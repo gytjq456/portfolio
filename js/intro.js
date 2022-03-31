@@ -50,9 +50,9 @@
 				messageC_translateY_out: [0, -20, { start: 0.65, end: 0.7 }],
 				// messageD_translateY_out: [0, -20, { start: 0.85, end: 0.9 }]
 
-				bigTitA_translateX_in: [10, 0, { start: 0.1, end: 0.2 }],
-				bigTitB_translateX_in: [10, 0, { start: 0.3, end: 0.4 }],
-				bigTitC_translateX_in: [10, 0, { start: 0.5, end: 0.6 }]
+				bigTitA_translateX_in: [40, 0, { start: 0.1, end: 0.2 }],
+				bigTitB_translateX_in: [40, 0, { start: 0.3, end: 0.4 }],
+				bigTitC_translateX_in: [40, 0, { start: 0.5, end: 0.6 }]
 			}
 		},
 		{

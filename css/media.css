@@ -46,12 +46,13 @@
   }
   .workPortFolio .work-item .info {
     max-width: 100%;
+    margin-bottom: 40px;
   }
   .workPortFolio .work-item .more::before {
     display: none;
   }
   .workPortFolio .img {
-    padding: 0 20px;
+    padding: 0 40px;
   }
   .workPortFolio img {
     margin: 0 auto;
@@ -69,6 +70,13 @@
     font-size: 5rem;
     white-space: nowrap;
   }
+  .snow * {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  .workPortFolio .arrows button {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -79,7 +87,8 @@
     font-size: 3rem;
   }
   .sticky-elem .bigTit {
-    font-size: 3.2rem;
+    top: 8vh;
+    font-size: 4.2rem;
   }
   .section_tit p {
     font-size: 5rem;

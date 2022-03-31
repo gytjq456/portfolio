@@ -51,6 +51,7 @@
 
       .info {
         max-width: 100%;
+				margin-bottom: 40px;
       }
       .more {
         &::before {
@@ -60,7 +61,7 @@
       }
     }
     .img {
-      padding: 0 20px;
+      padding: 0 40px;
     }
     img {
       margin: 0 auto;
@@ -87,6 +88,20 @@
       white-space: nowrap;
     }
   }
+
+	.snow {
+		* {
+			transform: scale(1.4);
+		}
+	}
+
+	.workPortFolio {
+		.arrows {
+			button {
+				font-size: 3rem;
+			}
+		}
+	}
 }
 
 @media (max-width: 640px) {
@@ -103,7 +118,9 @@
   }
   .sticky-elem {
     .bigTit {
-      font-size: 3.2rem;
+      // font-size: 3.2rem;
+			top:8vh;
+      font-size: 4.2rem;
     }
   }
 
